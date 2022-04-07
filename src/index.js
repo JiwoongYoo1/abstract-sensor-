@@ -2,11 +2,8 @@ class Sensor {
     constructor(name){
         this.name = name     
         this.powerStatus = 'off'  
-        this.reportingInterval = 10000 
-
-        
-     }
- 
+        this.reportingInterval = 10000         
+     } 
   
       turn(onoff){    
          this.onoff = onoff    
@@ -16,10 +13,8 @@ class Sensor {
             this.powerStatus = 'off'
          }else{
             this.powerStatus = onoff
-         }
-        
-         this.status = 'idle'
-        
+         }        
+         this.status = 'idle'       
          
          setTimeout(() => {
              this.status = 'sensingDistance';
@@ -29,12 +24,8 @@ class Sensor {
              this.status = 'idle'           
            }, 1000);
           }, 500);
-         }, this.reportingInterval);
-       
-         
+         }, this.reportingInterval);             
      }
-     
-      
 }   
     
 class IotServer {
